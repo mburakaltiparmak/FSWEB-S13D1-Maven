@@ -9,9 +9,13 @@ public class Main {
         int secondAge = 23;
         int thirdAge = 34;
         boolean hasTeenQuestion = hasTeen(firstAge, secondAge, thirdAge);
+        boolean isSummer = true;
+        int temp = 35;
+        boolean isCatPlayingQuestion = isCatPlaying(isSummer,temp);
         System.out.println("Hello world!");
         System.out.println("Should wake up? " + shouldWake);
         System.out.println("Are they teen?" + hasTeenQuestion);
+        System.out.println("Is cat playing?" + isCatPlayingQuestion);
     }
 
 
@@ -38,9 +42,27 @@ public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
     }
 
     public static boolean isCatPlaying(boolean isSummer, int temp) {
-     
-    }
+        if (isSummer) {
+            if(temp >=25 && temp<=45) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else if (!isSummer) {
+            if(temp >=25 && temp<=35){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
 
+    }
     public static double area(double width, double height) {
        
     }
