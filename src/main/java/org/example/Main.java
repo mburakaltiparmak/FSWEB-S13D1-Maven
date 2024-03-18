@@ -6,6 +6,7 @@ public class Main {
         int firstAge = 22;
         int secondAge = 23;
         int thirdAge = 34;
+
         //
         boolean isSummer = true;
         int temp = 35;
