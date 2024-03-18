@@ -16,6 +16,9 @@ public class Main {
         System.out.println("Should wake up? " + shouldWake);
         System.out.println("Are they teen?" + hasTeenQuestion);
         System.out.println("Is cat playing?" + isCatPlayingQuestion);
+        double width = -1.0;
+        double height = 4.0;
+        double areaResult = area(width,height);
     }
 
 
@@ -64,7 +67,16 @@ public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
 
     }
     public static double area(double width, double height) {
-       
+        if(width < 0 || height < 0) {
+            System.out.println("Parametreler negatif değer alamaz.");
+            return -1;
+        }
+        else {
+            double result = width*height;
+            System.out.println("area =" + result);
+            return result;
+        }
+
     }
 
     public static double area(double radius) {
