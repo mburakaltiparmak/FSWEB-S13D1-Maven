@@ -1,10 +1,8 @@
-package org.example;
-
 public class Main {
     public static void main(String[] args) {
-        boolean isBarking=false;
-        int clock=2;
-        boolean shouldWake = shouldWakeUp(isBarking,clock);
+        boolean isBarking = false;
+        int clock = 2;
+        boolean shouldWake = shouldWakeUp(isBarking, clock);
         int firstAge = 22;
         int secondAge = 23;
         int thirdAge = 34;
@@ -15,12 +13,12 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("Should wake up? " + shouldWake);
         System.out.println("Are they teen?" + hasTeenQuestion);
-        System.out.println("Is cat playing?" + isCatPlayingQuestion);
         double width = -1.0;
         double height = 4.0;
         double areaResult = area(width,height);
+        double radius = 5.0;
+        double circleAreaResult = area(radius);
     }
-
 
     public static boolean shouldWakeUp(boolean isBarking, int clock) {
         if (isBarking) {
@@ -33,17 +31,13 @@ public class Main {
         return false;
     }
 
-
-}
-
-
-public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
-    if ((firstAge >= 13 && firstAge <= 19) || (secondAge >= 13 && secondAge <= 19) || (thirdAge >= 13 && thirdAge <= 19)) {
-        return true;
-    } else {
-        return false;
+    public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
+        if ((firstAge >= 13 && firstAge <= 19) || (secondAge >= 13 && secondAge <= 19) || (thirdAge >= 13 && thirdAge <= 19)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
     public static boolean isCatPlaying(boolean isSummer, int temp) {
         if (isSummer) {
             if(temp >=25 && temp<=45) {
@@ -60,6 +54,7 @@ public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
             else {
                 return false;
             }
+
         }
         else {
             return false;
@@ -73,12 +68,11 @@ public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
         }
         else {
             double result = width*height;
-            System.out.println("area =" + result);
+            System.out.println("Polygon area =" + result);
             return result;
         }
 
     }
-
     public static double area(double radius) {
         if (radius < 0) {
             System.out.println("Radius negatif değer alamaz.");
