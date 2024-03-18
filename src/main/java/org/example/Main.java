@@ -2,22 +2,26 @@ public class Main {
     public static void main(String[] args) {
         boolean isBarking = false;
         int clock = 2;
-        boolean shouldWake = shouldWakeUp(isBarking, clock);
+        //
         int firstAge = 22;
         int secondAge = 23;
         int thirdAge = 34;
-        boolean hasTeenQuestion = hasTeen(firstAge, secondAge, thirdAge);
+        //
         boolean isSummer = true;
         int temp = 35;
-        boolean isCatPlayingQuestion = isCatPlaying(isSummer,temp);
-        System.out.println("Hello world!");
-        System.out.println("Should wake up? " + shouldWake);
-        System.out.println("Are they teen?" + hasTeenQuestion);
+        //
         double width = -1.0;
         double height = 4.0;
-        double areaResult = area(width,height);
+        //
         double radius = 5.0;
-        double circleAreaResult = area(radius);
+        //
+        System.out.println("Is cat playing?" + isCatPlaying(isSummer,temp));
+        System.out.println("Should wake up? " + shouldWakeUp(isBarking,clock));
+        System.out.println("Are they teen?" + hasTeen(firstAge, secondAge, thirdAge));
+        System.out.println("Polygon area = " + area(width,height));
+        System.out.println("Circle area = " + area(radius));
+
+
     }
 
     public static boolean shouldWakeUp(boolean isBarking, int clock) {
@@ -68,7 +72,6 @@ public class Main {
         }
         else {
             double result = width*height;
-            System.out.println("Polygon area =" + result);
             return result;
         }
 
@@ -80,7 +83,6 @@ public class Main {
         }
         else {
             double result = radius*radius*Math.PI;
-            System.out.println("Circle area =" + result);
             return result;
         }
     }
