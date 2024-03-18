@@ -80,6 +80,14 @@ public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
     }
 
     public static double area(double radius) {
-       
+        if (radius < 0) {
+            System.out.println("Radius negatif değer alamaz.");
+            return -1;
+        }
+        else {
+            double result = radius*radius*Math.PI;
+            System.out.println("Circle area =" + result);
+            return result;
+        }
     }
 }
